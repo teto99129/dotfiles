@@ -19,4 +19,9 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = false,
   },
+  actions = {
+    open_file = {
+      quit_on_open = true,  -- ファイルを開いたら tree を閉じる
+    },
+  },
 })

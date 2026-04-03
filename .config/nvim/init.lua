@@ -45,3 +45,17 @@ end
 
 load_require(vim.fn.stdpath("config") .. "/lua/config") 
 vim.cmd("colorscheme nightfox")
+
+-- 背景を透明にする設定
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NonText", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+
+-- nvim-treeの背景を透明にする
+vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "none" }) -- フォーカスが外れた時
+vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "none" })
+vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { bg = "none" }) -- 境界線（お好みで）
+
+require('lualine').setup()
